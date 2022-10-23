@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 9204372827842873832}
   - component: {fileID: 9204372827841776424}
   - component: {fileID: 1296359638645992122}
-  - component: {fileID: 5177718886487619681}
   m_Layer: 0
   m_Name: WeaponPrefab
   m_TagString: Untagged
@@ -200,16 +199,3 @@ MonoBehaviour:
   Knockback: 2
   KnockbackForce: {x: 10, y: 2}
   InvincibilityDuration: 0.5
---- !u!114 &5177718886487619681
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9204372827844040168}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21c87dcb61232394a93fe3a8e9a6d4ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sword: {fileID: 9204372827844040168}
