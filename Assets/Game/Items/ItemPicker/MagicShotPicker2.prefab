@@ -174,8 +174,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6422881641635443603}
-  - component: {fileID: 8322499590125977014}
-  - component: {fileID: -293525985337115567}
+  - component: {fileID: 2865556367329741037}
+  - component: {fileID: 8299265385581971352}
   m_Layer: 0
   m_Name: MagicShotPicker2
   m_TagString: Untagged
@@ -200,26 +200,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8322499590125977014
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6422881641635443614}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2d96dc71d76c4e2ab8eb19d92d40d5f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Item: {fileID: 11400000, guid: 00d27994a34564e45b2d8db9bda3dc38, type: 2}
-  Quantity: 1
-  RemainingQuantity: 1
-  PickableIfInventoryIsFull: 1
-  DisableObjectWhenDepleted: 1
-  PickFeedbacks: {fileID: 0}
-  ResetQuantityOnPlayerRespawn: 1
---- !u!58 &-293525985337115567
+--- !u!58 &2865556367329741037
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -229,12 +210,31 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &8299265385581971352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6422881641635443614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0da22c0e36c09f4c96f885a3fbc83b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Item: {fileID: 11400000, guid: 00d27994a34564e45b2d8db9bda3dc38, type: 2}
+  Quantity: 1
+  RemainingQuantity: 1
+  PickableIfInventoryIsFull: 1
+  DisableObjectWhenDepleted: 1
+  PickFeedbacks: {fileID: 0}
+  ResetQuantityOnPlayerRespawn: 1
 --- !u!1001 &1300769247330540784
 PrefabInstance:
   m_ObjectHideFlags: 0

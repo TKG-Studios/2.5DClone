@@ -5,37 +5,40 @@ using MoreMountains.Tools;
 using MoreMountains.InventoryEngine;
 using MoreMountains.Feedbacks;
 using MoreMountains.CorgiEngine;
+using System;
 
 public class InventoryPickableItemExtension : InventoryPickableItem
 {
 
     private InventoryItem currentlyHeldItem;
 
+  
 
-    private void Update()
+    private void Update() //TO DO --- CHANGE THIS FROM WORKING ON TICK
     {
-        if (_targetInventory.Content != null)
-        {
-            currentlyHeldItem = _targetInventory.Content[0];
-        }
+       
     }
     public override bool Pickable()
     {
         base.Pickable();
 
-
-        if (_targetInventory.NumberOfFreeSlots == 0)
+        if (_targetInventory.Content != null)
         {
-            StartCoroutine(DropPreviousItem());
+            if (_targetInventory.Content.Length > 0)
+            {
+                currentlyHeldItem = _targetInventory.Content[0];
+            }
+        }
+
+     
+
+        if (_targetInventory.NumberOfFreeSlots == 0 && currentlyHeldItem.ItemName != Item.ItemName)
+        {
+            _targetInventory.DropItem(currentlyHeldItem, 0);
+            Pick(Item.TargetInventoryName);
         }
         return true;
     }
 
   
-    IEnumerator DropPreviousItem()
-    {
-        _targetInventory.DropItem(currentlyHeldItem,0);
-        yield return new WaitForSeconds(.5f);
-        Pick(Item.TargetInventoryName);
-    }
 }

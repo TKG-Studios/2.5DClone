@@ -39,7 +39,7 @@ MonoBehaviour:
   Prefab: {fileID: 6422881641635443614, guid: 8b760e704d594c3468f6476bfa1f0ed0, type: 3}
   DropProperties:
     Shape: 0
-    NormalToSpawnPlane: {x: 0, y: 1, z: 0}
+    NormalToSpawnPlane: {x: 0, y: 0, z: 1}
     MinimumSphereRadius: 1
     MaximumSphereRadius: 2
     MinimumCubeBaseSize: {x: 1, y: 1, z: 1}
