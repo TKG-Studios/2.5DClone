@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 9204372827841776424}
   - component: {fileID: 1296359638645992122}
   m_Layer: 0
-  m_Name: WeaponPrefab
+  m_Name: AjaxSword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
