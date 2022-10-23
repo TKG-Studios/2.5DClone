@@ -86,7 +86,6 @@ GameObject:
   - component: {fileID: 1853624695358700252}
   - component: {fileID: 1853624695358700255}
   - component: {fileID: 1853624695358700254}
-  - component: {fileID: 7678255507254811975}
   - component: {fileID: 4951666835700685581}
   m_Layer: 9
   m_Name: Ajax
@@ -560,39 +559,6 @@ MonoBehaviour:
   NewInputExtendsBuffer: 0
   MaximumBufferDuration: 0.25
   CurrentWeapon: {fileID: 0}
---- !u!114 &7678255507254811975
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1853624695358700240}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3141ca867f14a464ab5c3a815142ad80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AbilityStartFeedbacks: {fileID: 0}
-  AbilityStopFeedbacks: {fileID: 0}
-  AbilityPermitted: 1
-  BlockingMovementStates: 
-  BlockingConditionStates: 
-  InitialWeapon: {fileID: 0}
-  CanPickupWeapons: 1
-  WeaponAttachment: {fileID: 872719574159084310}
-  ForceWeaponScaleResetOnEquip: 0
-  ForceWeaponRotationResetOnEquip: 1
-  AutomaticallyBindAnimator: 1
-  AmmoDisplayID: 0
-  ContinuousPress: 0
-  GettingHitInterruptsAttack: 0
-  CanShootFromLadders: 0
-  FaceWeaponDirection: 0
-  InvertHorizontalAimWhenWallclinging: 0
-  BufferInput: 0
-  NewInputExtendsBuffer: 0
-  MaximumBufferDuration: 0.25
-  CurrentWeapon: {fileID: 0}
 --- !u!114 &4951666835700685581
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -619,10 +585,10 @@ MonoBehaviour:
   CharacterHandleWeapon: {fileID: 1853624695358700254}
   InventoryTransform: {fileID: 1853624695358700241}
   AutoAddItemsMainInventory:
-  - Item: {fileID: 11400000, guid: d0f7f564278312748be2c3e6270793f2, type: 2}
+  - Item: {fileID: 11400000, guid: a3c00f8fa3149b24c90041a39e1df835, type: 2}
     Quantity: 1
   AutoAddItemsHotbar: []
-  AutoEquipWeapon: {fileID: 0}
+  AutoEquipWeapon: {fileID: 11400000, guid: d0f7f564278312748be2c3e6270793f2, type: 2}
 --- !u!1 &5352697679580420633
 GameObject:
   m_ObjectHideFlags: 0

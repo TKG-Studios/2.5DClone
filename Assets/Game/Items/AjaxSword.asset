@@ -14,16 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemID: AjaxSword
   TargetInventoryName: MainInventory
-  ForceSlotIndex: 1
+  ForceSlotIndex: 0
   TargetIndex: 0
   Usable: 0
   Consumable: 0
   ConsumeQuantity: 1
   Equippable: 1
-  MoveWhenEquipped: 0
+  MoveWhenEquipped: 1
   Droppable: 0
-  CanMoveObject: 0
-  CanSwapObject: 0
+  CanMoveObject: 1
+  CanSwapObject: 1
   DisplayProperties:
     DisplayEquipUseButton: 0
     DisplayMoveButton: 0
@@ -88,5 +88,5 @@ MonoBehaviour:
   UseDefaultSoundsIfNull: 0
   EquippableWeapon: {fileID: 1296359638645992122, guid: f6fd225880e65404bbafafa321e9647e,
     type: 3}
-  AutoEquipMode: 2
+  AutoEquipMode: 1
   HandleWeaponID: 1

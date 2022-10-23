@@ -16,21 +16,21 @@ MonoBehaviour:
   TargetInventoryName: MagicInventory
   ForceSlotIndex: 0
   TargetIndex: 0
-  Usable: 1
-  Consumable: 1
+  Usable: 0
+  Consumable: 0
   ConsumeQuantity: -1
   Equippable: 1
   MoveWhenEquipped: 0
   Droppable: 1
   CanMoveObject: 0
-  CanSwapObject: 0
+  CanSwapObject: 1
   DisplayProperties:
-    DisplayEquipUseButton: 1
-    DisplayMoveButton: 1
-    DisplayDropButton: 1
-    DisplayEquipButton: 1
-    DisplayUseButton: 1
-    DisplayUnequipButton: 1
+    DisplayEquipUseButton: 0
+    DisplayMoveButton: 0
+    DisplayDropButton: 0
+    DisplayEquipButton: 0
+    DisplayUseButton: 0
+    DisplayUnequipButton: 0
   Quantity: 1
   ItemName: MagicShot 2
   ShortDescription: MS2
