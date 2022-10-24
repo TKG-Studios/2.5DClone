@@ -76,7 +76,7 @@ MonoBehaviour:
   Animators: []
   EquippedAnimationParameter: 
   IdleAnimationParameter: 
-  StartAnimationParameter: 
+  StartAnimationParameter: PunchAttackStart
   DelayBeforeUseAnimationParameter: 
   SingleUseAnimationParameter: 
   UseAnimationParameter: 

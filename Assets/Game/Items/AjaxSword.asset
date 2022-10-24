@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemID: AjaxSword
   TargetInventoryName: MainInventory
-  ForceSlotIndex: 0
+  ForceSlotIndex: 1
   TargetIndex: 0
   Usable: 0
   Consumable: 0

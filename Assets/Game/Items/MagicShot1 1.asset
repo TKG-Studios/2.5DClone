@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemID: MagicShot1
   TargetInventoryName: MagicInventory
-  ForceSlotIndex: 0
+  ForceSlotIndex: 1
   TargetIndex: 0
   Usable: 0
-  Consumable: 1
+  Consumable: 0
   ConsumeQuantity: -1
   Equippable: 1
-  MoveWhenEquipped: 0
+  MoveWhenEquipped: 1
   Droppable: 1
   CanMoveObject: 0
   CanSwapObject: 1
