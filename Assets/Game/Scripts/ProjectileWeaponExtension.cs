@@ -9,6 +9,7 @@ namespace MoreMountains.CorgiEngine
     {
         [MMInspectorGroup("Resource Management", true, 12)]
         public bool usesMana;
+        public float manaUsed;
 
         protected override void WeaponUse()
         {
@@ -16,7 +17,8 @@ namespace MoreMountains.CorgiEngine
 
             if (usesMana && GetComponentInParent<Mana>().CurrentMana > 0)
             {
-              
+                GetComponentInParent<Mana>().UseMana(manaUsed);
+
                  for (int i = 0; i < ProjectilesPerShot; i++)
                     {
                         SpawnProjectile(SpawnPosition, i, ProjectilesPerShot, true);

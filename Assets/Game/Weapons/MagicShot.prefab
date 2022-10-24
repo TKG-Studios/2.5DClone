@@ -194,6 +194,7 @@ MonoBehaviour:
   RandomSpread: 1
   SpawnPosition: {x: -138.4546, y: -7.646072, z: 156.4373}
   usesMana: 1
+  manaUsed: 1
 --- !u!1001 &1300769247330540784
 PrefabInstance:
   m_ObjectHideFlags: 0

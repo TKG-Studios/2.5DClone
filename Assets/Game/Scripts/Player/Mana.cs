@@ -62,6 +62,15 @@ namespace MoreMountains.CorgiEngine
         public bool InfiniteMana = false;
 
 
+        protected Vector3 _initialPosition;
+        protected Color _initialColor;
+        protected Renderer _renderer;
+        protected Character _character;
+        protected CharacterPersistence _characterPersistence = null;
+        protected bool _initialized = false;
+        protected AutoRespawn _autoRespawn;
+        protected Animator _animator;
+        protected MMHealthBar _manaBar;
         protected virtual void Start()
         {
             Initialization();
@@ -70,6 +79,96 @@ namespace MoreMountains.CorgiEngine
         protected virtual void Initialization()
         {
             CurrentMana = InitialMana;
+            _character = this.gameObject.GetComponent<Character>();
+            _characterPersistence = this.gameObject.GetComponent<CharacterPersistence>();
+            _initialized = true;
+            if (_character != null)
+            {
+                if (_character.CharacterAnimator != null)
+                {
+                    _animator = _character.CharacterAnimator;
+                }
+
+                if (_character.CharacterModel != null)
+                {
+                    if (_character.CharacterModel.GetComponentInChildren<Renderer>() != null)
+                    {
+                        _renderer = _character.CharacterModel.GetComponentInChildren<Renderer>();
+                    }
+                }
+            }
+            _autoRespawn = this.gameObject.GetComponent<AutoRespawn>();
+            _manaBar = this.gameObject.GetComponent<MMHealthBar>();
+
+            StoreInitialPosition();
+        }
+
+
+        public virtual void StoreInitialPosition()
+        {
+            _initialPosition = transform.position;
+        }
+
+        /// <summary>
+        /// Called when the character uses mana by shooting projectiles
+        /// </summary>
+        /// <param name="mana">The mana the character gets.</param>
+      
+        /// 
+
+        public virtual void UseMana(float mana)
+        {
+            if (mana > 0)
+            {
+                CurrentMana -= mana;
+                UpdateManaBar(true);
+            }
+        }
+
+
+        /// <summary>
+        /// Called when the character gets mana (from a heart for example)
+        /// </summary>
+        /// <param name="mana">The mana the character gets.</param>
+        /// <param name="instigator">The thing that gives the character mana.</param>
+        /// 
+
+        public virtual void GetMana(float mana, GameObject instigator)
+        {
+            CurrentMana = Mathf.Min(CurrentMana + mana, MaximumMana);
+            UpdateManaBar(true);
+        }
+
+        /// <summary>
+        /// Sets the health of the character to the one specified in parameters
+        /// </summary>
+        /// <param name="newMana"></param>
+        /// <param name="instigator"></param>
+        /// 
+        public virtual void SetMana(float newMana, GameObject instigator)
+        {
+            CurrentMana = Mathf.Min(newMana, MaximumMana);
+            UpdateManaBar(false);
+        }
+
+
+        public virtual void UpdateManaBar(bool show)
+        {
+            if (_manaBar != null)
+            {
+                _manaBar.UpdateBar(CurrentMana, 0f, MaximumMana, show);
+            }
+
+            if (_character != null)
+            {
+                if (_character.CharacterType == Character.CharacterTypes.Player)
+                {//Update Mana Bar
+                    if (GUIManager.HasInstance)
+                    {
+                        GUIManager.Instance.UpdateManaBar(CurrentMana, 0f, MaximumMana, _character.PlayerID);
+                    }
+                }
+            }
         }
 
     }

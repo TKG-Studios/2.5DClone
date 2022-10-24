@@ -16,11 +16,13 @@ namespace MoreMountains.CorgiEngine
 		/// the game object that contains the heads up display (avatar, health, points...)
 		[Tooltip("the game object that contains the heads up display (avatar, health, points...)")]
 		public GameObject HUD;
-		/// the jetpack bar
-		[Tooltip("the jetpack bar")]
+		/// the health bar
+		[Tooltip("the health bar")]
 		public MMProgressBar[] HealthBars;
-		/// the jetpack bar
-		[Tooltip("the jetpack bar")]
+        [Tooltip("the mana bar")]
+        public MMProgressBar[] ManaBars;
+        /// the jetpack bar
+        [Tooltip("the jetpack bar")]
 		public MMProgressBar[] JetPackBars;
 		/// the panels and bars used to display current weapon ammo
 		[Tooltip("the panels and bars used to display current weapon ammo")]
@@ -274,14 +276,37 @@ namespace MoreMountains.CorgiEngine
 
 		}
 
-		/// <summary>
-		/// Updates the jetpack bar.
-		/// </summary>
-		/// <param name="currentFuel">Current fuel.</param>
-		/// <param name="minFuel">Minimum fuel.</param>
-		/// <param name="maxFuel">Max fuel.</param>
-		/// <param name="playerID">Player I.</param>
-		public virtual void UpdateJetpackBar(float currentFuel, float minFuel, float maxFuel,string playerID)
+        /// <summary>
+        /// Updates the Mana bar.
+        /// </summary>
+        /// <param name="currentMana">Current health.</param>
+        /// <param name="minMana">Minimum health.</param>
+        /// <param name="maxMana">Max health.</param>
+        /// <param name="playerID">Player I.</param>
+        public virtual void UpdateManaBar(float currentMana, float minMana, float maxMana, string playerID)
+        {
+            if (HealthBars == null) { return; }
+            if (HealthBars.Length <= 0) { return; }
+
+            foreach (MMProgressBar manaBar in ManaBars)
+            {
+                if (manaBar == null) { continue; }
+                if (manaBar.PlayerID == playerID)
+                {
+                    manaBar.UpdateBar(currentMana, minMana, maxMana);
+                }
+            }
+
+        }
+
+        /// <summary>
+        /// Updates the jetpack bar.
+        /// </summary>
+        /// <param name="currentFuel">Current fuel.</param>
+        /// <param name="minFuel">Minimum fuel.</param>
+        /// <param name="maxFuel">Max fuel.</param>
+        /// <param name="playerID">Player I.</param>
+        public virtual void UpdateJetpackBar(float currentFuel, float minFuel, float maxFuel,string playerID)
 		{
 			if (JetPackBars == null)
 			{

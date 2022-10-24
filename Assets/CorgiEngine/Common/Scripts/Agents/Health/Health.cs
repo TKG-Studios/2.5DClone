@@ -196,8 +196,8 @@ namespace MoreMountains.CorgiEngine
 		protected bool _initialized = false;
 		protected AutoRespawn _autoRespawn;
 		protected Animator _animator;
-		protected CharacterPersistence _characterPersistence = null;
-		protected MaterialPropertyBlock _propertyBlock;
+        protected CharacterPersistence _characterPersistence = null;
+        protected MaterialPropertyBlock _propertyBlock;
 		protected bool _hasColorProperty = false;
 		protected class InterruptiblesDamageOverTimeCoroutine
 		{
