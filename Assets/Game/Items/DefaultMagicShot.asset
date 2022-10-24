@@ -17,8 +17,8 @@ MonoBehaviour:
   ForceSlotIndex: 1
   TargetIndex: 0
   Usable: 1
-  Consumable: 0
-  ConsumeQuantity: -1
+  Consumable: 1
+  ConsumeQuantity: 1
   Equippable: 1
   MoveWhenEquipped: 0
   Droppable: 1
@@ -86,7 +86,7 @@ MonoBehaviour:
   MovedSound: {fileID: 0}
   DroppedSound: {fileID: 0}
   UseDefaultSoundsIfNull: 1
-  EquippableWeapon: {fileID: 6422881641635443600, guid: be8f2e70dc6acad4f8de7021bfa7c591,
+  EquippableWeapon: {fileID: 186205857872247852, guid: be8f2e70dc6acad4f8de7021bfa7c591,
     type: 3}
   AutoEquipMode: 1
   HandleWeaponID: 2

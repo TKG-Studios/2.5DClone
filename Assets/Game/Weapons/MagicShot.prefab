@@ -41,10 +41,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6422881641635443603}
-  - component: {fileID: 6422881641635443600}
-  - component: {fileID: 4521189739571075634}
-  - component: {fileID: 5233767447034576391}
-  - component: {fileID: 6707418322196226611}
+  - component: {fileID: 704488397300230371}
+  - component: {fileID: 186205857872247852}
   m_Layer: 0
   m_Name: MagicShot
   m_TagString: Untagged
@@ -68,7 +66,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6422881641635443600
+--- !u!114 &704488397300230371
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -77,27 +75,47 @@ MonoBehaviour:
   m_GameObject: {fileID: 6422881641635443614}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d7ce0b8cf4b34859b9e359283b2e7f3, type: 3}
+  m_Script: {fileID: 11500000, guid: 7df6072216f53ce49be0ef6face305ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MutualizeWaitingPools: 1
+  NestWaitingPool: 0
+  NestUnderThis: 1
+  GameObjectToPool: {fileID: 100002, guid: c7a2328e2057cf747afceb7c07d5a660, type: 3}
+  PoolSize: 20
+  PoolCanExpand: 1
+  poolerTransform: {fileID: 1853624695358700241, guid: c4d62bdbc08f169479f6f3865abfd352,
+    type: 3}
+--- !u!114 &186205857872247852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6422881641635443614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbd988f56319a974a9b1178b9f84b6e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   TriggerMode: 0
   DelayBeforeUse: 0
-  DelayBeforeUseReleaseInterruption: 0
+  DelayBeforeUseReleaseInterruption: 1
   TimeBetweenUses: 1
-  TimeBetweenUsesReleaseInterruption: 0
+  TimeBetweenUsesReleaseInterruption: 1
   Interruptable: 0
-  InitializeOnStart: 1
+  InitializeOnStart: 0
   MagazineBased: 0
-  MagazineSize: 10
+  MagazineSize: 30
   AutoReload: 0
-  ReloadTime: 0
+  ReloadTime: 2
   AmmoConsumedPerShot: 1
   AutoDestroyWhenEmpty: 0
-  AutoDestroyWhenEmptyDelay: 0
+  AutoDestroyWhenEmptyDelay: 1
   CurrentAmmoLoaded: 0
   WeaponAttachmentOffset: {x: 0, y: 0, z: 0}
   FlipWeaponOnCharacterFlip: 1
-  FlipValue: {x: 1, y: 1, z: 1}
+  FlipValue: {x: -1, y: 1, z: 1}
   LeftHandHandle: {fileID: 0}
   RightHandHandle: {fileID: 0}
   ModifyMovementWhileEquipped: 0
@@ -175,54 +193,7 @@ MonoBehaviour:
   RotateWeaponOnSpread: 0
   RandomSpread: 1
   SpawnPosition: {x: -138.4546, y: -7.646072, z: 156.4373}
---- !u!114 &4521189739571075634
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6422881641635443614}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d708b09d7c685aa4596060c0c90f2d57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AmmoID: AmmoAmmo
-  AmmoInventoryName: MainInventory2
-  MaxAmmo: 50
-  ShouldLoadOnStart: 1
-  ShouldEmptyOnSave: 1
-  CurrentAmmoAvailable: 0
---- !u!114 &5233767447034576391
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6422881641635443614}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe6fa3da9fd88a84e8860fdf586d8f5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &6707418322196226611
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6422881641635443614}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b7277539b95c0d45895792ecc99ce66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MutualizeWaitingPools: 1
-  NestWaitingPool: 1
-  NestUnderThis: 0
-  GameObjectToPool: {fileID: 100002, guid: c7a2328e2057cf747afceb7c07d5a660, type: 3}
-  PoolSize: 20
-  PoolCanExpand: 1
+  usesMana: 1
 --- !u!1001 &1300769247330540784
 PrefabInstance:
   m_ObjectHideFlags: 0
