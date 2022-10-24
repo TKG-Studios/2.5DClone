@@ -16,13 +16,13 @@ MonoBehaviour:
   TargetInventoryName: MagicInventory
   ForceSlotIndex: 1
   TargetIndex: 0
-  Usable: 0
-  Consumable: 0
+  Usable: 1
+  Consumable: 1
   ConsumeQuantity: -1
   Equippable: 1
   MoveWhenEquipped: 1
   Droppable: 1
-  CanMoveObject: 0
+  CanMoveObject: 1
   CanSwapObject: 1
   DisplayProperties:
     DisplayEquipUseButton: 0
