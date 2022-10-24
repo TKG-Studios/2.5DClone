@@ -74,11 +74,24 @@ namespace MoreMountains.CorgiEngine
         protected virtual void Start()
         {
             Initialization();
+          
         }
 
         protected virtual void Initialization()
         {
-            CurrentMana = InitialMana;
+            if (!InfiniteMana)
+            {
+                CurrentMana = InitialMana;
+             
+            }
+
+            if (InfiniteMana)
+            {
+                CurrentMana = MaximumMana;
+             
+            }
+        
+
             _character = this.gameObject.GetComponent<Character>();
             _characterPersistence = this.gameObject.GetComponent<CharacterPersistence>();
             _initialized = true;
@@ -101,6 +114,7 @@ namespace MoreMountains.CorgiEngine
             _manaBar = this.gameObject.GetComponent<MMHealthBar>();
 
             StoreInitialPosition();
+            UpdateManaBar(true);
         }
 
 
@@ -118,7 +132,7 @@ namespace MoreMountains.CorgiEngine
 
         public virtual void UseMana(float mana)
         {
-            if (mana > 0)
+            if (mana > 0 && !InfiniteMana)
             {
                 CurrentMana -= mana;
                 UpdateManaBar(true);
