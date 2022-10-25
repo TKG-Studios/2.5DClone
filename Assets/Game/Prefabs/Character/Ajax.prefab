@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: -8028939789916591944}
   - component: {fileID: -430687523332532003}
   - component: {fileID: 1228374202259016008}
+  - component: {fileID: 1418792335890795674}
   m_Layer: 9
   m_Name: Ajax
   m_TagString: Player
@@ -312,8 +313,8 @@ MonoBehaviour:
   CurrentHealth: 0
   TemporarilyInvulnerable: 0
   PostDamageInvulnerable: 0
-  InitialHealth: 100
-  MaximumHealth: 100
+  InitialHealth: 50
+  MaximumHealth: 50
   Invulnerable: 0
   ImmuneToDamage: 0
   DamageFeedbacks: {fileID: 0}
@@ -429,7 +430,7 @@ MonoBehaviour:
   BlockingMovementStates: 
   BlockingConditionStates: 
   NumberOfJumps: 1
-  JumpHeight: 2.5
+  JumpHeight: 2.8
   JumpRestrictions: 0
   ResetCameraOffsetOnJump: 0
   CanJumpDownOneWayPlatforms: 1
@@ -670,8 +671,31 @@ MonoBehaviour:
   CurrentMana: 0
   TemporarilyInfiniteMana: 0
   InitialMana: 0
-  MaximumMana: 10
+  MaximumMana: 50
   InfiniteMana: 0
+--- !u!114 &1418792335890795674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1853624695358700240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0677e4e697adcd840b838146b8b282d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AbilityStartFeedbacks: {fileID: 0}
+  AbilityStopFeedbacks: {fileID: 0}
+  AbilityPermitted: 1
+  BlockingMovementStates: 
+  BlockingConditionStates: 
+  ButtonBased: 0
+  CanPush: 1
+  CanPull: 1
+  PushWhenGroundedOnly: 1
+  DetectionRaycastLength: 0.2
+  MinimumPushSpeed: 0.05
 --- !u!1 &5352697679580420633
 GameObject:
   m_ObjectHideFlags: 0

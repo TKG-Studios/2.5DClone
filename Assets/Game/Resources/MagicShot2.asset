@@ -1,0 +1,92 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16f005fbcfc61684c82bf819bce9d63b, type: 3}
+  m_Name: MagicShot2
+  m_EditorClassIdentifier: 
+  ItemID: MagicShot2
+  TargetInventoryName: MagicInventory
+  ForceSlotIndex: 1
+  TargetIndex: 0
+  Usable: 0
+  Consumable: 0
+  ConsumeQuantity: -1
+  Equippable: 1
+  MoveWhenEquipped: 1
+  Droppable: 1
+  CanMoveObject: 0
+  CanSwapObject: 1
+  DisplayProperties:
+    DisplayEquipUseButton: 0
+    DisplayMoveButton: 0
+    DisplayDropButton: 0
+    DisplayEquipButton: 0
+    DisplayUseButton: 0
+    DisplayUnequipButton: 0
+  Quantity: 1
+  ItemName: MagicShot 2
+  ShortDescription: MS2
+  Description: MS2
+  Icon: {fileID: 21300000, guid: 4f6d9c09ade1c9742a5e2bdf5428445f, type: 3}
+  Prefab: {fileID: 6422881641635443614, guid: 8b760e704d594c3468f6476bfa1f0ed0, type: 3}
+  DropProperties:
+    Shape: 0
+    NormalToSpawnPlane: {x: 0, y: 0, z: 1}
+    MinimumSphereRadius: 1
+    MaximumSphereRadius: 2
+    MinimumCubeBaseSize: {x: 1, y: 1, z: 1}
+    MaximumCubeBaseSize: {x: 2, y: 2, z: 2}
+    MinimumNormalAxisOffset: 0
+    MaximumNormalAxisOffset: 0
+    UseNormalAxisOffsetCurve: 0
+    NormalOffsetCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    NormalOffsetCurveRemapZero: 0
+    NormalOffsetCurveRemapOne: 1
+    InvertNormalOffsetCurve: 0
+    MinimumRotation: {x: 0, y: 0, z: 0}
+    MaximumRotation: {x: 0, y: 0, z: 0}
+    MinimumScale: {x: 1, y: 1, z: 1}
+    MaximumScale: {x: 1, y: 1, z: 1}
+  MaximumStack: 1
+  ItemClass: 2
+  TargetEquipmentInventoryName: MagicInventory
+  EquippedSound: {fileID: 0}
+  UsedSound: {fileID: 0}
+  MovedSound: {fileID: 0}
+  DroppedSound: {fileID: 0}
+  UseDefaultSoundsIfNull: 1
+  EquippableWeapon: {fileID: 6422881641635443600, guid: 0a4de0266fa8ec6458b1e21a2f68f945,
+    type: 3}
+  AutoEquipMode: 1
+  HandleWeaponID: 2

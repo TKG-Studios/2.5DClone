@@ -249,7 +249,7 @@ namespace MoreMountains.CorgiEngine
 		{
 			if (PointsText!= null)
 			{ 
-				PointsText.text = GameManager.Instance.Points.ToString(PointsPattern);
+				PointsText.text = "Coins: " + GameManager.Instance.Points.ToString(PointsPattern);
 			}
 		}
 
