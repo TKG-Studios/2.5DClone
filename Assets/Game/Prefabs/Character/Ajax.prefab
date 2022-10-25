@@ -669,7 +669,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentMana: 0
   TemporarilyInfiniteMana: 0
-  InitialMana: 10
+  InitialMana: 0
   MaximumMana: 10
   InfiniteMana: 0
 --- !u!1 &5352697679580420633
